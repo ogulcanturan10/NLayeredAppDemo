@@ -5,6 +5,7 @@ using Northwind.DataAccess.Concrete.EntityFramework;
 using Northwind.Entities.Concrete;
 using System;
 using System.Collections.Generic;
+using System.Data.Entity.Infrastructure;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -21,6 +22,24 @@ namespace Northwind.Business.Concrete
             _productDal = productDal;
         }
 
+        public void Add(Product product)
+        {
+            _productDal.Add(product);
+        }
+
+        public void Delete(Product product)
+        {
+            try
+            {
+                _productDal.Delete(product);
+
+            }
+            catch (DbUpdateException e)
+            {
+                throw new Exception("Delete failed")
+            }
+        }
+
         public List<Product> GetAll()
         {
             //Business code 
@@ -28,6 +47,21 @@ namespace Northwind.Business.Concrete
 
             return _productDal.GetAll();
 
+        }
+
+        public List<Product> GetProductByCategory(int categoryId)
+        {
+            return _productDal.GetAll(p => p.CategoryId == categoryId);
+        }
+
+        public List<Product> GetProductsByProductName(string productName)
+        {
+            return _productDal.GetAll(p => p.ProductName.ToLower().Contains(productName.ToLower()));
+        }
+
+        public void Update(Product product)
+        {
+            _productDal.Update(product);
         }
     }
 }
