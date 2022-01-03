@@ -12,3 +12,10 @@ D:\C#\NLayaredAppDemo2\Northwind.Business\obj\Debug\Northwind.Business.csproj.Co
 D:\C#\NLayaredAppDemo2\Northwind.Business\obj\Debug\Northwind.Business.csproj.CopyComplete
 D:\C#\NLayaredAppDemo2\Northwind.Business\obj\Debug\Northwind.Business.dll
 D:\C#\NLayaredAppDemo2\Northwind.Business\obj\Debug\Northwind.Business.pdb
+D:\C#\NLayaredAppDemo2\Northwind.Business\bin\Debug\Northwind.Business.dll.config
+D:\C#\NLayaredAppDemo2\Northwind.Business\bin\Debug\EntityFramework.SqlServer.dll
+D:\C#\NLayaredAppDemo2\Northwind.Business\bin\Debug\FluentValidation.dll
+D:\C#\NLayaredAppDemo2\Northwind.Business\bin\Debug\EntityFramework.SqlServer.xml
+D:\C#\NLayaredAppDemo2\Northwind.Business\bin\Debug\FluentValidation.xml
+D:\C#\NLayaredAppDemo2\Northwind.Business\bin\Debug\Ninject.dll
+D:\C#\NLayaredAppDemo2\Northwind.Business\bin\Debug\Ninject.xml

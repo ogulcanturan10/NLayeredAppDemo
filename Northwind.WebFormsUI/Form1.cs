@@ -1,5 +1,6 @@
 ﻿using Northwind.Business.Abstract;
 using Northwind.Business.Concrete;
+using Northwind.Business.DependencyResolvers.Ninject;
 using Northwind.DataAccess.Concrete.EntityFramework;
 using Northwind.DataAccess.Concrete.Nhibernate;
 using Northwind.Entities.Concrete;
@@ -20,8 +21,8 @@ namespace Northwind.WebFormsUI
         public Form1()
         {
             InitializeComponent();
-             _productService= new ProductManager(new EfProductDal());
-            _categoryService = new CategoryManager(new EfCategoryDal());
+            _productService = InstanceFactory.GetInstance<IProductService>();
+            _categoryService = InstanceFactory.GetInstance<ICategoryService>();
         }
         
         private IProductService _productService;
@@ -83,17 +84,26 @@ namespace Northwind.WebFormsUI
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            _productService.Add(new Product
+            try
+            {
+                _productService.Add(new Product
+                {
+
+                    CategoryId = Convert.ToInt32(cbxCategoryId.SelectedValue),
+                    ProductName = tbxProductName2.Text,
+                    QuantityPerUnit = tbxQuantityPerUnit.Text,
+                    UnitPrice = Convert.ToDecimal(tbxUnitPrice.Text),
+                    UnitsInStock = Convert.ToInt16(tbxStockAmount.Text)
+                });
+                MessageBox.Show("Added!");
+                LoadProducts();
+            }
+            catch (Exception exception)
             {
 
-                CategoryId = Convert.ToInt32(cbxCategoryId.SelectedValue),
-                ProductName = tbxProductName2.Text,
-                QuantityPerUnit =tbxQuantityPerUnit.Text,
-                UnitPrice =Convert.ToDecimal(tbxUnitPrice.Text),
-                UnitsInStock= Convert.ToInt16(tbxStockAmount.Text)
-            });
-            MessageBox.Show("Added!");
-            LoadProducts();
+                MessageBox.Show(exception.Message);
+            }
+
         }
 
         private void btnUpdate_Click(object sender, EventArgs e)

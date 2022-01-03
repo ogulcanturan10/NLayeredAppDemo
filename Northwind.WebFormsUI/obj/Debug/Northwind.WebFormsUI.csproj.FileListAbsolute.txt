@@ -20,3 +20,8 @@ D:\C#\NLayaredAppDemo2\Northwind.WebFormsUI\obj\Debug\Northwind.WebFormsUI.cspro
 D:\C#\NLayaredAppDemo2\Northwind.WebFormsUI\obj\Debug\Northwind.WebFormsUI.csproj.CopyComplete
 D:\C#\NLayaredAppDemo2\Northwind.WebFormsUI\obj\Debug\Northwind.WebFormsUI.exe
 D:\C#\NLayaredAppDemo2\Northwind.WebFormsUI\obj\Debug\Northwind.WebFormsUI.pdb
+D:\C#\NLayaredAppDemo2\Northwind.WebFormsUI\bin\Debug\FluentValidation.dll
+D:\C#\NLayaredAppDemo2\Northwind.WebFormsUI\bin\Debug\Northwind.Business.dll.config
+D:\C#\NLayaredAppDemo2\Northwind.WebFormsUI\bin\Debug\FluentValidation.xml
+D:\C#\NLayaredAppDemo2\Northwind.WebFormsUI\bin\Debug\Ninject.dll
+D:\C#\NLayaredAppDemo2\Northwind.WebFormsUI\bin\Debug\Ninject.xml
